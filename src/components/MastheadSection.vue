@@ -110,15 +110,15 @@
           <Item
             :images="[
               {
-                url: '/masthead-mobile.0f9c068c.jpg',
+                url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-mobile.jpg',
                 type: 'default' 
               },
               {
-                url: '/masthead-tab.62659b60.jpg',
+                url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-tab.jpg',
                 type: 'tab' 
               },
               {
-                url: '/masthead-desktop.e8f29f04.jpg',
+                url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-desktop.jpg',
                 type: 'dt' 
               }               
             ]"
@@ -173,7 +173,7 @@
           <Item
             :images="[
               {
-                url: '/masthead-tab.62659b60.jpg',
+                url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-tab.jpg',
                 type: 'default' 
               }              
             ]"
@@ -280,15 +280,15 @@
                     :imgClass="['max-h-full', 'tab:max-h-screen']" 
                     :images="[
                     {
-                      url: '/masthead-mobile.0f9c068c.jpg',
+                      url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-mobile.jpg',
                       type: 'default' 
                     },
                     {
-                      url: '/masthead-tab.62659b60.jpg',
+                      url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-tab.jpg',
                       type: 'tab' 
                     },
                     {
-                      url: '/masthead-desktop.e8f29f04.jpg',
+                      url: 'https://www.jackwills.com/images/marketing/justin-images/demo/masthead-desktop.jpg',
                       type: 'dt' 
                     }                   
                   ]"            

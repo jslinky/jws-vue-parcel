@@ -80,19 +80,19 @@ import ImageComponent from './Image'
         default: function() {
           return [
             {
-              url: '/item-img-default.f9e934f9.png',
+              url: 'https://www.jackwills.com/images/marketing/justin-images/demo/item-img-default.png',
               type: 'default' 
             },
             {
-              url: '/item-img-largeMobile.b522a9ac.png',
+              url: 'https://www.jackwills.com/images/marketing/justin-images/demo/item-img-largeMobile.png',
               type: 'lgmob' 
             },
             {
-              url: '/item-img-tablet.28e13281.png',
+              url: 'https://www.jackwills.com/images/marketing/justin-images/demo/item-img-tablet.png',
               type: 'tab' 
             },
             {
-              url: '/item-img-desktop.15d7efd0.png',
+              url: 'https://www.jackwills.com/images/marketing/justin-images/demo/item-img-desktop.png',
               type: 'dt' 
             }                                   
           ]

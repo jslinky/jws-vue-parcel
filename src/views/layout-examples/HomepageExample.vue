@@ -7,11 +7,11 @@
       <Item
         :images="[        
           {
-            url: '/herom.0f9482d9.jpg',
+            url: 'https://www.jackwills.com/images/marketing/justin-images/homepage/herom.jpg',
             type: 'default' 
           },                      
           {
-            url: '/hero.437d1d65.jpg',
+            url: 'https://www.jackwills.com/images/marketing/justin-images/homepage/hero.jpg',
             type: 'tab' 
           }              
         ]"
@@ -56,7 +56,7 @@
       <Item
         :images="[        
           {
-            url: '/banner3d.85556d17.jpg',
+            url: 'https://www.jackwills.com/images/marketing/justin-images/homepage/banner3d.jpg',
             type: 'default' 
           }             
         ]"      
@@ -118,7 +118,7 @@
       <Item
         :images="[        
           {
-            url: '/banner3d.85556d17.jpg',
+            url: 'https://www.jackwills.com/images/marketing/justin-images/homepage/banner3d.jpg',
             type: 'default' 
           }             
         ]"      

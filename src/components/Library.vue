@@ -137,8 +137,8 @@ p {
 }
 
 
-.c-mh-demo-fixed-bg {
-  --mh-bg: url(../assets/TEST/01-BG.jpg);
+.c-mh-demo-fixed-bg {  
+  --mh-bg: url(https://www.jackwills.com/images/marketing/justin-images/demo/01-BG.jpg);
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;  
