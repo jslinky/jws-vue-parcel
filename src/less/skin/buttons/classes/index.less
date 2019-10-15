@@ -1,0 +1,61 @@
+
+// /*******************************
+// Buttons
+// *******************************/
+
+//-------------------
+//  Layout
+//-------------------- 
+.o-btn { #rules.skin.buttons(btn-rules); }
+*:not(.o-btns) > .o-btn--primary,
+*:not(.o-btns) > .o-btn--basic,
+.o-btns > .o-btn[class*="--primary"]:only-child,
+.o-btns > .o-btn[class*="--basic"]:only-child { #rules.skin.buttons(no-group-btn); }
+//-------------------
+//  Default button
+//-------------------- 
+.o-btn { #rules.skin.buttons(btn-default-rules); }
+.o-btn:after { 
+  #rules.skin.buttons(btn-after-rules); 
+  #rules.skin.buttons(btn-default-after-rules); 
+}
+.o-btn:hover { #rules.skin.buttons(btn-default-hover-rules); }
+.o-btn:active,
+.o-btn.active { #rules.skin.buttons(btn-default-active-rules); }
+//-------------------
+//  Default button - inverted
+//-------------------- 
+.o-btn.inverted { #rules.skin.buttons(btn-default-inverted-rules); }
+.o-btn.inverted:hover { #rules.skin.buttons(btn-default-inverted-hover-rules); }
+.o-btn.inverted:active,
+.o-btn.inverted.active { #rules.skin.buttons(btn-default-inverted-active-rules); }
+//-------------------
+//  Basic button
+//-------------------- 
+.o-btn--basic { #rules.skin.buttons(btn-basic-rules); }
+.o-btn--basic:after { #rules.skin.buttons(btn-basic-after-rules);  }
+.o-btn--basic:hover { #rules.skin.buttons(btn-basic-hover-rules); }
+.o-btn--basic:active,
+.o-btn--basic.active { #rules.skin.buttons(btn-basic-active-rules); }
+//-------------------
+//  Basic button - inverted
+//-------------------- 
+.o-btn--basic.inverted { #rules.skin.buttons(btn-basic-inverted-rules); }
+.o-btn--basic.inverted:hover { #rules.skin.buttons(btn-basic-inverted-hover-rules); }
+.o-btn--basic.inverted:active,
+.o-btn--basic.inverted.active { #rules.skin.buttons(btn-basic-inverted-active-rules); }
+//-------------------
+//  Primary button
+//-------------------- 
+.o-btn--primary { #rules.skin.buttons(btn-primary-rules); }
+.o-btn--primary:after { #rules.skin.buttons(btn-primary-after-rules);  }
+.o-btn--primary:hover { #rules.skin.buttons(btn-primary-hover-rules); }
+.o-btn--primary:active,
+.o-btn--primary.active { #rules.skin.buttons(btn-primary-active-rules); }
+//-------------------
+//  Primary button - inverted
+//-------------------- 
+.o-btn--primary.inverted { #rules.skin.buttons(btn-primary-inverted-rules); }
+.o-btn--primary.inverted:hover { #rules.skin.buttons(btn-primary-inverted-hover-rules); }
+.o-btn--primary.inverted:active,
+.o-btn--primary.inverted.active { #rules.skin.buttons(btn-primary-inverted-active-rules); }

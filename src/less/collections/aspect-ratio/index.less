@@ -1,0 +1,51 @@
+//*******************************
+//    Aspect ratio
+//    Add a inline style defining --aspect-ratio custom prop
+//    Responsive classes for adding and removing - tab:aspect / tab:no-aspect 
+//*******************************
+
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+[style*="--aspect-ratio"] > img {  
+  height: auto;
+} 
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }  
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }  
+}
+
+//-------------------
+//  Add / disable ratio
+//--------------------
+
+@responsive {
+  .no-aspect {
+    &:before {
+      display:none;
+    }
+    > :first-child {
+      position: inherit;
+    }
+  }
+  .aspect {
+    &:before {
+      display:block;
+    }
+    > :first-child {
+      position: absolute;
+    }    
+  }  
+}

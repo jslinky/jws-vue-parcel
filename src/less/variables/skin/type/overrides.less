@@ -1,0 +1,19 @@
+//*******************************
+//    Typograhic variables
+//*******************************
+
+#var.skin {
+  .type() {
+    //-------------------
+    //  Body
+    //--------------------
+    @body-fontFamily                    : 'Arial', sans-serif; // ref to a variable
+    @body-fontWeight                    : normal;
+
+    @body-letterSpacingVal              : 1;
+    @body-letterSpacing                 : ~"calc((@{body-letterSpacingVal} / @{fontSizeRoot}) * 1em)";        
+  }
+
+}
+
+

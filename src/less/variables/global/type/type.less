@@ -1,0 +1,37 @@
+//*******************************
+//    Typograhic variables
+//*******************************
+
+#var.global {
+  .type() {
+
+    //-------------------
+    //  BASES SIZES
+    //  Global font setting and spacing
+    //--------------------
+  
+    @fontSizeRoot                       : 16;
+    @fontSizeBody                       : 16; 
+    
+    @fontSizeRootPixel                  : unit(@fontSizeRoot, px);
+    @fontSize                           : (@fontSizeBody / @fontSizeRoot) * 1rem; 
+    @fontSizeRelative                   : unit(@fontSize, em); 
+
+    //-------------------
+    //  LINE HEIGHT
+    //  Values to calculate line-height and offset spacing of elements
+    //--------------------
+
+    @lineHeight                         : 1.5; 
+    @lineHeightRem                      : unit(@lineHeight, rem);
+    @verticalRhythm                     : (@lineHeight * @fontSizeRoot);
+    @offset                             : @lineHeightRem ~"+ 1vmin"; 
+    @spacing                            : unit((@verticalRhythm / @fontSizeRoot), rem);
+
+    @ff-sans                            : theme('fontFamily.sans');
+    @ff-serif                           : theme('fontFamily.serif');
+  }
+
+}
+
+

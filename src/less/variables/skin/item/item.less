@@ -1,0 +1,44 @@
+
+//*******************************
+//    Item variables
+//*******************************
+
+#var.skin {
+  .item() {   
+    @item-justify                       : center; // justify-content
+    @item-align                         : center; // align-items
+    @item-dir                           : column; // flex-direction
+    @item-bg                            : none; // background
+    @item-pointer-e                     : none; // pointer events    
+    //-------------------
+    //  Content
+    //--------------------        
+    @item-content-pos                   : relative; // position
+    @item-content-rhythm                : 0.75rem; // vertical margin
+    @item-content-m                     : @item-content-rhythm 0 0; // margin
+    @item-content-h                     : auto; // height
+    @item-content-w                     : 100%; // width
+    @item-content-justify               : center; // justify-content
+    @item-content-align                 : center; // align-items
+    @item-content-dir                   : column; // flex-direction
+    @item-content-bg                    : none; // background
+    //-------------------
+    //  Figure
+    //--------------------            
+    @item-figure-dir                    : column; // flex-direction
+    //-------------------
+    //  Image
+    //--------------------            
+    @item-img-ob-fit                    : contain; // object-fit
+    @item-img-ob-pos                    : top; // object-position
+    @item-img-opacity                   : 1; // opacity
+    //-------------------
+    //  Card
+    //--------------------    
+    @item-card-breakpoint               : 768; // Number 
+    @item-card-image-percentage         : 50; // Number
+    @item-card-content-percentage       : ~"(100 - var(--item-card-image-percentage))";
+    @item-card-content-flex-basis       : ~"calc( ( ( (0.01 * var(--item-card-content-percentage)) * var(--item-card-breakpoint) ) ) *1px )";                          
+  }    
+}
+

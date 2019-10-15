@@ -1,0 +1,89 @@
+//*******************************
+//    Item Rules
+//*******************************
+
+#rules.skin {
+  .item() {
+    @default: {
+      position: relative;
+      display: flex;
+      justify-content: var(--item-justify);
+      align-items: var(--item-align);
+      flex-direction: var(--item-dir);
+      background:var(--item-bg);
+    };   
+    @figure: {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      flex-direction: var(--item-figure-dir);
+      margin:0;
+      width:100%;
+    };   
+    @figure-link: {
+      display: block;
+      line-height: 0;
+      width:100%;
+      &:after {
+        display: none;
+      }
+    };
+    @picture: {
+      display:flex;
+      flex: 1 1 auto;
+      height:100%;
+    };
+    @img: {
+      width:100%;
+      object-fit: var(--item-img-ob-fit);
+      object-position: var(--item-img-ob-pos);
+      opacity: var(--item-img-opacity);
+    };
+    @hdr: {
+      #rules.skin.headings(md);
+    };
+    @content: {
+      display:flex;
+      position: var(--item-content-pos);
+      width:var(--item-content-w);
+      height:var(--item-content-h);
+      margin: var(--item-content-m);
+      justify-content: var(--item-content-justify);
+      align-items: var(--item-content-align);
+      flex-direction: var(--item-content-dir);
+      background:var(--item-content-bg);
+    };
+    @content-overlay: {
+      --item-content-pos: absolute;
+      --item-content-w: auto;
+      --item-content-m: 0;
+      position: absolute;
+      position: var(--item-content-pos);
+    };
+    @card-figure: {
+      flex-direction: row;
+      flex-wrap: wrap;
+    };
+    @card-figure-link: {
+      flex: 1 1 50%;
+    };
+    @card-content: {
+      flex:1 1 auto;
+      flex-grow:9999;
+      flex-basis: ~"calc((((0.01 * var(--item-card-image-percentage)) * var(--item-card-breakpoint))) *1px)";
+    };
+  }
+}
+
+//-------------------
+//  SET UP SKIN ITEM MIXIN
+//--------------------
+
+#rules.skin {
+  .item(@ruleset) {
+    #rules.skin.item();
+    @rules: @@ruleset;
+    @rules();
+  }
+}

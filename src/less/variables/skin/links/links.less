@@ -1,0 +1,34 @@
+
+//*******************************
+//    Link variables
+//*******************************
+
+#var.skin {
+  .links() {
+    //-------------------
+    //  Links
+    //--------------------    
+    @linkColor                          : @primary-color;
+    @linkDecoration                     : none;
+    @linkColorHover                     : @primary-color;
+    @linkDecorationHover                : none;    
+    @linkTransition                     : all 150ms ease-in-out;    
+    //-------------------
+    //  Link After Element
+    //--------------------        
+    @linkAfterEl                        : true;
+    @linkAfterElHeight                  : 1px;
+    @linkAfterElBgColor                 : currentColor; 
+    @linkAfterElBgOpacity               : 0.5;
+    @linkAfterElTransform               : scale(0.5);  
+    @linkAfterElTopPos                  : auto;
+    @linkAfterElBottomPos               : ~"calc(50% - 0.8em)";
+    @linkAfterElLeftPos                 : -50%;
+    @linkAfterElRightPos                : -50%;
+    @linkAfterTransition                : all 120ms ease-in;
+
+    @linkAfterElBgColorHover            : @linkAfterElBgColor;
+    @linkAfterElBgOpacityHover          : 1;      
+  }
+}
+

@@ -1,0 +1,68 @@
+#rules {
+  .custom-props() {
+    // defined on button element
+    @btn: {
+      --btn-font: ~"var(--@{btn-font})";
+      --btn-font-size: @btn-font-size;   
+      --btn-radius: @btn-radius;
+      --btn-padding-left: @btn-padding-left;                   
+      --btn-padding-right: @btn-padding-right;                  
+      --btn-padding-top: @btn-padding-top;                    
+      --btn-padding-bottom: @btn-padding-bottom;                       
+      --btn-padding: var(--btn-padding-top) var(--btn-padding-right) var(--btn-padding-bottom) var(--btn-padding-right);         
+      --btn-after-width: ~"calc(@{btn-after-width-pc} - (var(--btn-padding-left) + var(--btn-padding-right) / 2))";
+      // --btn-min-width: @btn-min-width;
+    };
+    @btn-skin: {      
+      --btn-color: @btn-color;
+      --btn-bg-color: @btn-bg-color;
+      --btn-border-color: @btn-border-color;
+      --btn-border-width:@btn-border-width;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);
+      --btn-box-shadow: @btn-box-shadow;   
+      --btn-min-width: @btn-min-width;     
+      --btn-text-transform: @btn-text-transform;
+    };
+    @btn-skin-inverted: {
+      --btn-color: @btn-color-inverted;
+      --btn-bg-color: @btn-bg-color-inverted;
+      --btn-border-color: @btn-border-color-inverted;
+      --btn-border-width:@btn-border-width-inverted;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);
+      --btn-box-shadow: @btn-box-shadow-inverted;        
+    };    
+    // defined on button element
+    @btn-skin-hover: {
+      --btn-color: @btn-color-hover;
+      --btn-bg-color: @btn-bg-color-hover;
+      --btn-border-color: @btn-border-color-hover;
+      --btn-border-width:@btn-border-width-hover;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);      
+      --btn-box-shadow: @btn-box-shadow-hover;             
+    };
+    @btn-skin-inverted-hover: {
+      --btn-color: @btn-color-inverted-hover;
+      --btn-bg-color: @btn-bg-color-inverted-hover;
+      --btn-border-color: @btn-border-color-inverted-hover;
+      --btn-border-width:@btn-border-width-inverted-hover;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);      
+      --btn-box-shadow: @btn-box-shadow-inverted-hover;             
+    };    
+    @btn-skin-active: {
+      --btn-color: @btn-color-active;
+      --btn-bg-color: @btn-bg-color-active;
+      --btn-border-color: @btn-border-color-active;
+      --btn-border-width:@btn-border-width-active;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);      
+      --btn-box-shadow: @btn-box-shadow-active;             
+    };  
+    @btn-skin-inverted-active: {
+      --btn-color: @btn-color-inverted-active;
+      --btn-bg-color: @btn-bg-color-inverted-active;
+      --btn-border-color: @btn-border-color-inverted-active;
+      --btn-border-width:@btn-border-width-inverted-active;  
+      --btn-border: var(--btn-border-width) solid var(--btn-border-color);      
+      --btn-box-shadow: @btn-box-shadow-inverted-active;             
+    };
+  }
+}

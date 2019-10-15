@@ -1,0 +1,154 @@
+
+// @import "../../../variables/skin/buttons/config.less";
+
+#rules.skin {
+  .buttons() {
+    @btn-rules: {      
+      // These custom props defined on :root
+      .cust-prop(font-family, var(--btn-font), @@btn-font);
+      .cust-prop(font-size, var(--btn-font-size), @btn-font-size);
+      .cust-prop(border-radius, var(--btn-radius), @btn-radius);
+      .cust-prop(padding, var(--btn-padding), @btn-padding);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    };
+    @btn-after-rules: {
+      .cust-prop(width, var(--btn-after-width), @btn-after-width);
+      transform: @btn-after-transform;
+      left: @btn-after-left;
+    };
+    //-------------------
+    //  Default button rules
+    //--------------------  
+    @btn-default-rules: {
+      // Unlock default related styling vars
+      #var.skin.btn-default();
+      // Unlock styling custom props
+      #rules.custom-props(btn-skin); 
+      .cust-prop(color, var(--btn-color), @btn-color);
+      .cust-prop(background-color, var(--btn-bg-color), @btn-bg-color);
+      .cust-prop(border, var(--btn-border), @btn-border);
+      .cust-prop(box-shadow, var(--btn-box-shadow), @btn-box-shadow);      
+      .cust-prop(text-transform, var(--btn-text-transform), @btn-text-transform);
+    };
+    @no-group-btn: {
+      .cust-prop(min-width, var(--btn-min-width), @btn-min-width);
+    };
+    @btn-default-after-rules: {
+      #var.skin.btn-default();
+      .hide() when (@includes-underline = false) { display:none; }
+      .hide();    
+    };
+    @btn-default-inverted-rules: {
+      #var.skin.btn-default();
+      #rules.custom-props(btn-skin-inverted); 
+    };    
+    @btn-default-hover-rules: {
+      #var.skin.btn-default();
+      #rules.custom-props(btn-skin-hover); 
+    };
+    @btn-default-inverted-hover-rules: {
+      #var.skin.btn-default();
+      #rules.custom-props(btn-skin-inverted-hover); 
+    };    
+    @btn-default-active-rules: {
+      #var.skin.btn-default();
+      #rules.custom-props(btn-skin-active); 
+    };
+    @btn-default-inverted-active-rules: {
+      #var.skin.btn-default();
+      #rules.custom-props(btn-skin-inverted-active); 
+    };
+    //-------------------
+    //  Basic button rules
+    //--------------------  
+    @btn-basic-rules: {
+      // Unlock basic related styling vars
+      #var.skin.btn-basic();
+      // Unlock styling custom props
+      #rules.custom-props(btn-skin); 
+      .cust-prop(color, var(--btn-color), @btn-color);
+      .cust-prop(background-color, var(--btn-bg-color), @btn-bg-color);
+      .cust-prop(border, var(--btn-border), @btn-border);
+      .cust-prop(box-shadow, var(--btn-box-shadow), @btn-box-shadow);
+      .cust-prop(text-transform, var(--btn-text-transform), @btn-text-transform);
+    };
+    @btn-basic-after-rules: {
+      #var.skin.btn-basic();
+      .hide() when (@includes-underline = false) { display:none; }
+      .hide();    
+    };    
+    @btn-basic-inverted-rules: {
+      #var.skin.btn-basic();
+      #rules.custom-props(btn-skin-inverted); 
+    };    
+    @btn-basic-hover-rules: {
+      #var.skin.btn-basic();
+      #rules.custom-props(btn-skin-hover); 
+    };
+    @btn-basic-inverted-hover-rules: {
+      #var.skin.btn-basic();
+      #rules.custom-props(btn-skin-inverted-hover); 
+    };    
+    @btn-basic-active-rules: {
+      #var.skin.btn-basic();
+      #rules.custom-props(btn-skin-active); 
+    };
+    @btn-basic-inverted-active-rules: {
+      #var.skin.btn-basic();
+      #rules.custom-props(btn-skin-inverted-active); 
+    }; 
+    //-------------------
+    //  Primary button rules
+    //--------------------  
+    @btn-primary-rules: {
+      // Unlock primary related styling vars
+      #var.skin.btn-primary();
+      // Unlock styling custom props
+      #rules.custom-props(btn-skin); 
+      .cust-prop(color, var(--btn-color), @btn-color);
+      .cust-prop(background-color, var(--btn-bg-color), @btn-bg-color);
+      .cust-prop(border, var(--btn-border), @btn-border);
+      .cust-prop(box-shadow, var(--btn-box-shadow), @btn-box-shadow);
+      .cust-prop(text-transform, var(--btn-text-transform), @btn-text-transform);
+    };
+    @btn-primary-after-rules: {
+      #var.skin.btn-primary();
+      .hide() when (@includes-underline = false) { display:none; }
+      .hide();    
+    };    
+    @btn-primary-inverted-rules: {
+      #var.skin.btn-primary();
+      #rules.custom-props(btn-skin-inverted); 
+    };    
+    @btn-primary-hover-rules: {
+      #var.skin.btn-primary();
+      #rules.custom-props(btn-skin-hover); 
+    };
+    @btn-primary-inverted-hover-rules: {
+      #var.skin.btn-primary();
+      #rules.custom-props(btn-skin-inverted-hover); 
+    };    
+    @btn-primary-active-rules: {
+      #var.skin.btn-primary();
+      #rules.custom-props(btn-skin-active); 
+    };
+    @btn-primary-inverted-active-rules: {
+      #var.skin.btn-primary();
+      #rules.custom-props(btn-skin-inverted-active); 
+    };        
+  }
+}
+
+//-------------------
+//  SET UP SKIN BUTTONS MIXIN
+//--------------------
+
+#rules.skin {
+  .buttons(@ruleset) {
+    #rules.skin.buttons();
+    @rules: @@ruleset;
+    @rules();
+  }
+}

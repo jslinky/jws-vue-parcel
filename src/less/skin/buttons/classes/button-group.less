@@ -1,0 +1,30 @@
+
+// /*******************************
+//  Button Group
+// *******************************/
+
+//-------------------
+//  Button group container - o-buttons
+//-------------------- 
+
+.o-btns { #rules.skin.button-group(btn-group-rules); }
+.o-btns > .o-btn { #rules.skin.button-group(btn-group-btn-rules); }
+// make this a ruleset
+.o-btns > .o-btn:only-child { margin-bottom:0; }
+.o-btns.o-btns--grouped > .o-btn.o-btn { margin-right:0; margin-left:0; } // add in column-gap reset
+
+// @media (max-width:@largestMobileScreen) {
+@media (max-width:(@btns-stacked-max-bp*@em)) {
+  .o-btns.o-btns--stacked { #rules.skin.button-group(btn-group-stacked-rules); }
+  .o-btns.o-btns--stacked > .o-btn { #rules.skin.button-group(btn-group-btn-stacked-rules); }
+  .o-btns.o-btns--stacked > .o-btn:last-child { margin-bottom:0; }
+}
+
+// @media (min-width:@tabletBreakpoint) {
+@media (min-width:(@btns-not-stacked-min-bp*@em)) {
+  .o-btns.o-btns--stacked-md { #rules.skin.button-group(btn-group-stacked-rules); }
+  .o-btns.o-btns--stacked-md > .o-btn { #rules.skin.button-group(btn-group-btn-stacked-rules); }
+  .o-btns.o-btns--stacked-md > .o-btn:last-child { margin-bottom:0; }
+}
+
+.o-btns > .o-btn.w-auto { #rules.skin.button-group(btn-group-btn-auto-width);     }

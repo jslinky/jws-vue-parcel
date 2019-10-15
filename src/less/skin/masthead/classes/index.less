@@ -1,0 +1,41 @@
+
+// /*******************************
+// Masthead
+// *******************************/
+
+//-------------------
+//  Default
+//-------------------- 
+
+.o-mh { #rules.skin.masthead(default); }
+
+//-------------------
+//  Cover
+//-------------------- 
+
+.o-mh--cover { #rules.skin.masthead(cover); }
+
+.o-mh > *,
+.o-mh--cover .o-item__figure,
+.o-mh--cover .o-item__figure-link { flex:1 1 auto; }
+.o-mh--cover .o-item__figure-link { #rules.skin.masthead(cover-figure-link); }
+.o-mh--cover .o-item__img { #rules.skin.masthead(cover-item-img); }
+
+//-------------------
+//  Aspect Ratio
+//-------------------- 
+
+@supports (--custom:property) {
+
+  .o-mh[style*="--aspect-ratio"] .o-item__figure,
+  .o-mh[style*="--aspect-ratio"] .o-item__figure-link,
+  .o-mh[style*="--aspect-ratio"] .o-item__img {
+    height: 100%;
+  }
+
+  .o-mh[style*="--aspect-ratio"] .o-item__img {
+    --item-img-ob-fit:cover;
+  }
+
+}
+

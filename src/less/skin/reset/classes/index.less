@@ -1,0 +1,19 @@
+
+// /*******************************
+// Text
+// *******************************/
+
+p { #rules.skin.global(p); }
+// p:first-child { margin-top: 0em; }
+// p:last-child { margin-bottom: 0em; }
+
+// /*******************************
+// Links
+// *******************************/
+
+a { #rules.skin.global(link); }
+a:not(.o-btn):hover { #rules.skin.global(link-hover); }
+a:after { #rules.skin.global(link-after); }
+a:hover:after { #rules.skin.global(link-hover-after); }
+a > img { border:0; } //IE 10 fix
+

@@ -1,0 +1,211 @@
+
+//*******************************
+//    Button variables
+//*******************************
+
+#var.skin {
+  .btn() {
+    //-------------------
+    //  Buttons
+    //--------------------        
+    @btn-font                           : ff-sans;
+    @btn-font-size                      : (@fontSizeBody / @fontSizeRoot) * 1em;
+    @btn-padding-left                   : 1em;
+    @btn-padding-right                  : 1em;
+    @btn-padding-top                    : 1em;
+    @btn-padding-bottom                 : 1em;
+    @btn-padding                        : @btn-padding-top @btn-padding-right @btn-padding-bottom @btn-padding-left;    
+    @btn-radius                         : 0;    
+    @btn-transition                     : all 120ms ease-in;  
+    @btn-min-width                      : 140px;   
+    // After el
+    //////////////
+    @btn-after-width-pc                 : 175%;
+    @btn-after-width                    : ~"calc(@{btn-after-width-pc} - (@{btn-padding-left} + @{btn-padding-right} / 2))"; 
+    @btn-after-left                     : 50%;
+    @btn-after-transform                : @linkAfterElTransform translateX(-100%);
+  }
+  .btn-group() {
+    @btns-max-width                     : 650px; 
+    @btns-margin-y                      : @spacing / 2;
+    @btns-margin-x                      : @spacing / 2;     
+    @btns-stacked-max-bp                : 767;
+    @btns-not-stacked-min-bp            : @btns-stacked-max-bp + 1;
+  }
+  .btn-default() {
+    //-------------------
+    //  Default 
+    //--------------------        
+    @btn-color                          : @primary-color;
+    @btn-bg-color                       : transparent;
+    @btn-border-color                   : transparent;    
+    @btn-border-width                   : 0.05px;    
+    @btn-border                         : @btn-border-width solid @btn-border-color;    
+    @btn-box-shadow                     : none;    
+    @btn-min-width                      : auto;
+    @btn-text-transform                 : none;
+    // After
+    ///////////////
+    @includes-underline                 : true;
+    // Hover
+    ///////////////
+    @btn-color-hover                    : @primary-color;
+    @btn-bg-color-hover                 : transparent;
+    @btn-border-color-hover             : transparent;
+    @btn-border-width-hover             : 0.05px;    
+    @btn-border-hover                   : @btn-border-width-hover solid @btn-border-color-hover;    
+    @btn-box-shadow-hover               : none;   
+    // Active
+    ///////////////
+    @btn-color-active                   : @primary-color;
+    @btn-bg-color-active                : transparent;
+    @btn-border-color-active            : transparent;
+    @btn-border-width-active            : 0.05px;    
+    @btn-border-active                  : @btn-border-width-active solid @btn-border-color-active;    
+    @btn-box-shadow-active              : none;     
+    //-------------------
+    //  Default - inverted
+    //--------------------
+    @btn-color-inverted                 : @inverted-text-color;
+    @btn-bg-color-inverted              : transparent;
+    @btn-border-color-inverted          : transparent;    
+    @btn-border-width-inverted          : 0.05px;    
+    @btn-border-inverted                : @btn-border-width-inverted solid @btn-border-color-inverted;    
+    @btn-box-shadow-inverted            : none;     
+    // Hover
+    ///////////////
+    @btn-color-inverted-hover           : @inverted-text-color;
+    @btn-bg-color-inverted-hover        : transparent;
+    @btn-border-color-inverted-hover    : transparent;
+    @btn-border-width-inverted-hover    : 0.05px;    
+    @btn-border-inverted-hover          : @btn-border-width-inverted-hover solid @btn-border-color-inverted-hover;    
+    @btn-box-shadow-inverted-hover      : none;  
+    // Active
+    ///////////////
+    @btn-color-inverted-active          : @primary-color;
+    @btn-bg-color-inverted-active       : transparent;
+    @btn-border-color-inverted-active   : transparent;
+    @btn-border-width-inverted-active   : 0.05px;    
+    @btn-border-inverted-active         : @btn-border-width-inverted-active solid @btn-border-color-inverted-active;    
+    @btn-box-shadow-inverted-active     : none;       
+         
+  } 
+  .btn-basic() {
+    //-------------------
+    //  Basic 
+    //--------------------        
+    @btn-color                          : @primary-color;
+    @btn-bg-color                       : transparent;
+    @btn-border-color                   : currentColor;    
+    @btn-border-width                   : 1px;    
+    @btn-border                         : @btn-border-width solid @btn-border-color;    
+    @btn-box-shadow                     : none;  
+    @btn-min-width                      : 150px;
+    @btn-text-transform                 : uppercase;
+    // After
+    ///////////////
+    @includes-underline                 : false;      
+    // Hover
+    ///////////////
+    @btn-color-hover                    : @primary-color;
+    @btn-bg-color-hover                 : transparent;
+    @btn-border-color-hover             : currentColor;
+    @btn-border-width-hover             : 1px;    
+    @btn-border-hover                   : @btn-border-width-hover solid @btn-border-color-hover;    
+    @btn-box-shadow-hover               : 0 0 0 1px @btn-border-color-hover inset;   
+    // Active
+    ///////////////
+    @btn-color-active                   : @primary-color;
+    @btn-bg-color-active                : transparent;
+    @btn-border-color-active            : currentColor;
+    @btn-border-width-active            : 1px;    
+    @btn-border-active                  : @btn-border-width-active solid @btn-border-color-active;    
+    @btn-box-shadow-active              : none;     
+    //-------------------
+    //  Basic - inverted
+    //--------------------
+    @btn-color-inverted                 : @inverted-text-color;
+    @btn-bg-color-inverted              : transparent;
+    @btn-border-color-inverted          : currentColor;    
+    @btn-border-width-inverted          : 1px;    
+    @btn-border-inverted                : @btn-border-width-inverted solid @btn-border-color-inverted;    
+    @btn-box-shadow-inverted            : none;     
+    // Hover
+    ///////////////
+    @btn-color-inverted-hover           : @inverted-text-color;
+    @btn-bg-color-inverted-hover        : transparent;
+    @btn-border-color-inverted-hover    : currentColor;
+    @btn-border-width-inverted-hover    : 1px;    
+    @btn-border-inverted-hover          : @btn-border-width-inverted-hover solid @btn-border-color-inverted-hover;    
+    @btn-box-shadow-inverted-hover      : 0 0 0 1px @btn-border-color-inverted-hover inset;  
+    // Active
+    ///////////////
+    @btn-color-inverted-active          : @inverted-text-color;
+    @btn-bg-color-inverted-active       : transparent;
+    @btn-border-color-inverted-active   : currentColor;
+    @btn-border-width-inverted-active   : 1px;    
+    @btn-border-inverted-active         : @btn-border-width-inverted-active solid @btn-border-color-inverted-active;    
+    @btn-box-shadow-inverted-active     : 0 0 0 1px @btn-border-color-inverted-active inset;       
+         
+  } 
+  .btn-primary() {
+    //-------------------
+    //  Primary 
+    //--------------------        
+    @btn-color                          : @inverted-text-color;
+    @btn-bg-color                       : @primary-color;
+    @btn-border-color                   : @primary-color;    
+    @btn-border-width                   : 1px;    
+    @btn-border                         : @btn-border-width solid @btn-border-color;    
+    @btn-box-shadow                     : none;  
+    @btn-min-width                      : 150px;
+    @btn-text-transform                 : uppercase;
+    // After
+    ///////////////
+    @includes-underline                 : false;      
+    // Hover
+    ///////////////
+    @btn-color-hover                    : @primary-color;
+    @btn-bg-color-hover                 : transparent;
+    @btn-border-color-hover             : currentColor;
+    @btn-border-width-hover             : 1px;    
+    @btn-border-hover                   : @btn-border-width-hover solid @btn-border-color-hover;    
+    @btn-box-shadow-hover               : 0 0 0 1px @btn-border-color-hover inset;       
+
+    // Active
+    ///////////////
+    @btn-color-active                   : @primary-color;
+    @btn-bg-color-active                : transparent;
+    @btn-border-color-active            : @primary-color;
+    @btn-border-width-active            : 1px;    
+    @btn-border-active                  : @btn-border-width-active solid @btn-border-color-active;    
+    @btn-box-shadow-active              : 0 0 0 1px @btn-border-color-hover inset;     
+    //-------------------
+    //  Primary - inverted
+    //--------------------
+    @btn-color-inverted                 : @primary-color;
+    @btn-bg-color-inverted              : transparent;
+    @btn-border-color-inverted          : currentColor;    
+    @btn-border-width-inverted          : 1px;    
+    @btn-border-inverted                : @btn-border-width-inverted solid @btn-border-color-inverted;    
+    @btn-box-shadow-inverted            : none;     
+    // Hover
+    ///////////////
+    @btn-color-inverted-hover           : @inverted-text-color;
+    @btn-bg-color-inverted-hover        : @primary-color;
+    @btn-border-color-inverted-hover    : @primary-color;
+    @btn-border-width-inverted-hover    : 1px;    
+    @btn-border-inverted-hover          : @btn-border-width-inverted-hover solid @btn-border-color-inverted-hover;    
+    @btn-box-shadow-inverted-hover      : none;  
+    // Active
+    ///////////////
+    @btn-color-inverted-active          : @inverted-text-color;
+    @btn-bg-color-inverted-active       : @primary-color;
+    @btn-border-color-inverted-active   : @primary-color;
+    @btn-border-width-inverted-active   : 1px;    
+    @btn-border-inverted-active         : @btn-border-width-inverted-active solid @btn-border-color-inverted-active;    
+    @btn-box-shadow-inverted-active     : none;       
+         
+  }    
+}
+

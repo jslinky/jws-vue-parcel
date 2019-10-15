@@ -1,0 +1,61 @@
+
+
+
+#rules.skin {
+  .headings() {
+    @default: {
+      .cust-prop(font-family, var(--hdr-ff), @hdr-ff);
+      .cust-prop(font-size, var(--hdr-fs), @hdr-fs);
+      .cust-prop(text-transform, var(--hdr-tt), @hdr-tt);
+      .cust-prop(letter-spacing, var(--hdr-ls), @hdr-ls);
+      .cust-prop(color, var(--hdr-color), @hdr-color);
+    };
+    @sm: {                  
+      --hdr-ff: var(--hdr-sm-ff);
+      --hdr-fs: var(--hdr-sm-fs);
+      --hdr-ls: var(--hdr-sm-ls);
+    };      
+    @md: {      
+      --hdr-ff: var(--hdr-md-ff);
+      --hdr-fs: var(--hdr-md-fs);
+      --hdr-ls: var(--hdr-md-ls);      
+    };          
+    @lg: {      
+      --hdr-ff: var(--hdr-lg-ff);
+      --hdr-fs: var(--hdr-lg-fs);
+      --hdr-ls: var(--hdr-lg-ls);            
+    };              
+    @xl: {      
+      --hdr-ff: var(--hdr-xl-ff);
+      --hdr-fs: var(--hdr-xl-fs);
+      --hdr-ls: var(--hdr-xl-ls);      
+    };                 
+    @big: {      
+      --hdr-ff: var(--hdr-big-ff);
+      --hdr-fs: var(--hdr-big-fs);
+      --hdr-ls: var(--hdr-big-ls);      
+    };                   
+    @hg: {      
+      --hdr-ff: var(--hdr-hg-ff);
+      --hdr-fs: var(--hdr-hg-fs);
+      --hdr-ls: var(--hdr-hg-ls);
+    };
+    @msv: {      
+      --hdr-ff: var(--hdr-msv-ff);
+      --hdr-fs: var(--hdr-msv-fs);
+      --hdr-ls: var(--hdr-msv-ls);      
+    };                            
+  }
+}
+
+//-------------------
+//  SET UP SKIN BUTTONS MIXIN
+//--------------------
+
+#rules.skin {
+  .headings(@ruleset) {
+    #rules.skin.headings();
+    @rules: @@ruleset;
+    @rules();
+  }
+}

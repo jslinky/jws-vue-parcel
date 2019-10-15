@@ -1,0 +1,106 @@
+
+
+
+//*******************************
+//    Typograhic variables
+//*******************************
+
+#var.skin {
+  .type() {
+    //-------------------
+    //  Body
+    //--------------------
+    @body-fontFamily                    : 'Arial', sans-serif; // ref to a variable
+    @body-fontWeight                    : normal;
+
+    @body-letterSpacingVal              : 1;
+    @body-letterSpacing                 : ~"calc((@{body-letterSpacingVal} / @{fontSizeRoot}) * 1em)";    
+    
+    @body-fontSmoothing                 : auto;
+    @body-fontSmoothing-webkit          : antialiased;
+    @body-fontSmoothing-moz             : auto;  
+
+    //-------------------
+    //  Text Color
+    //--------------------        
+    @inverted-text-color                : @white;
+    @text-color                         : @off-black;
+
+    //-------------------
+    //  Paragraph
+    //--------------------    
+    @paragraphFontSize                  : inherit; 
+    @paragraphLetterSpacingVal          : 0.75;
+    @paragraphLetterSpacing             : ~"calc((@{paragraphLetterSpacingVal} / @{fontSizeRoot}) * 1rem)";
+    @paragraphSpacingMultiplyerTop      : 1;
+    @paragraphSpacingTop                : ~"calc(@{paragraphSpacingMultiplyerTop} * @{spacing})";
+    @paragraphSpacingMultiplyerBottom   : 1;
+    @paragraphSpacingBottom             : ~"calc(@{paragraphSpacingMultiplyerBottom} * @{spacing})";    
+    @paragraphSpacing                   : @paragraphSpacingTop 0 @paragraphSpacingBottom;
+    @paragraphLineHeight                : inherit;    
+    //-------------------
+    //  Headings
+    //--------------------  
+    // Default
+    @hdr-fs-val                         : base;
+    @hdr-fs                             : ~"theme('fontSize.@{hdr-fs-val}')";
+    @hdr-ff-val                         : serif;
+    @hdr-ff                             : ~"theme('fontFamily.@{hdr-ff-val}')";
+    @hdr-ls                             : 0;
+    @hdr-tt                             : none;
+    @hdr-color-val                      : text-color;
+    @hdr-color                          : @@hdr-color-val;
+    // Small
+    @hdr-sm-fs-val                      : sm;
+    @hdr-sm-fs                          : ~"theme('fontSize.@{hdr-sm-fs-val}')";
+    @hdr-sm-ff-val                      : serif;
+    @hdr-sm-ff                          : ~"theme('fontFamily.@{hdr-sm-ff-val}')";    
+    @hdr-sm-ls                          : 0;
+    @hdr-sm-tt                          : none;
+    // Medium
+    @hdr-md-fs-val                      : md;
+    @hdr-md-fs                          : ~"theme('fontSize.@{hdr-md-fs-val}')";
+    @hdr-md-ff-val                      : serif;
+    @hdr-md-ff                          : ~"theme('fontFamily.@{hdr-md-ff-val}')";  
+    @hdr-md-ls                          : 0;    
+    @hdr-md-tt                          : none;
+    // Large
+    @hdr-lg-fs-val                      : lg;
+    @hdr-lg-fs                          : ~"theme('fontSize.@{hdr-lg-fs-val}')";
+    @hdr-lg-ff-val                      : serif;
+    @hdr-lg-ff                          : ~"theme('fontFamily.@{hdr-lg-ff-val}')";  
+    @hdr-lg-ls                          : 0;
+    @hdr-lg-tt                          : none;
+    // Extra Large
+    @hdr-xl-fs-val                      : xl;
+    @hdr-xl-fs                          : ~"theme('fontSize.@{hdr-xl-fs-val}')";
+    @hdr-xl-ff-val                      : serif;
+    @hdr-xl-ff                          : ~"theme('fontFamily.@{hdr-xl-ff-val}')";  
+    @hdr-xl-ls                          : 0;
+    @hdr-xl-tt                          : none;
+    // Big
+    @hdr-big-fs-val                     : big;
+    @hdr-big-fs                         : ~"theme('fontSize.@{hdr-big-fs-val}')";
+    @hdr-big-ff-val                     : serif;
+    @hdr-big-ff                         : ~"theme('fontFamily.@{hdr-big-ff-val}')";  
+    @hdr-big-ls                         : 0;
+    @hdr-big-tt                         : none;
+    // Huge
+    @hdr-hg-fs-val                      : hg;
+    @hdr-hg-fs                          : ~"theme('fontSize.@{hdr-hg-fs-val}')";
+    @hdr-hg-ff-val                      : serif;
+    @hdr-hg-ff                          : ~"theme('fontFamily.@{hdr-hg-ff-val}')";  
+    @hdr-hg-ls                          : 0;
+    @hdr-hg-tt                          : none;
+    // Massive
+    @hdr-msv-fs-val                     : msv;
+    @hdr-msv-fs                         : ~"theme('fontSize.@{hdr-msv-fs-val}')";
+    @hdr-msv-ff-val                     : serif;
+    @hdr-msv-ff                         : ~"theme('fontFamily.@{hdr-msv-ff-val}')";  
+    @hdr-msv-ls                         : 0;  
+    @hdr-msv-tt                         : none;  
+
+
+  }
+}
+

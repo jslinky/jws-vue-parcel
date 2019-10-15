@@ -1,0 +1,20 @@
+//*******************************
+//    Sizing / Spacing variables
+//*******************************
+
+#var.global {
+  .sizing() {
+    @em              : (1 / @fontSizeRoot) + 0em; // px to em conversion
+    @rem             : (1 / @fontSizeRoot) + 0rem; // px to rem conversion
+
+    @tiny            : theme('spacing.t');
+    @small           : theme('spacing.sm');
+    @base            : theme('spacing.base'); 
+    @medium          : theme('spacing.md');
+    @large           : theme('spacing.lg');
+    @extraLarge      : theme('spacing.xl');
+    @big             : theme('spacing.big');
+    @huge            : theme('spacing.hg');
+    @massive         : theme('spacing.msv');
+  }
+}

@@ -1,0 +1,207 @@
+
+//       |\  \|\  \     |\  \|\   ____\     
+//       \ \  \ \  \    \ \  \ \  \___|_    
+//     __ \ \  \ \  \  __\ \  \ \_____  \   
+//     |\  \\_\  \ \  \|\__\_\  \|____|\  \  
+//     \ \________\ \____________\____\_\  \ 
+//     \|________|\|____________|\_________\
+//                               \|_________|
+// Project: JWS CSS framework
+// Description: A LESS based CSS framework which also leverages Tailwind for settings and ultils
+// Author: Justin Small
+
+//*******************************
+//    TAILWIND Base 
+//*******************************
+
+@tailwind base;
+
+//*******************************
+//    TAILWIND Components 
+//*******************************
+
+@tailwind components;
+
+//*******************************
+//    VARIABLES - Import 
+//*******************************
+
+@import "./variables/config.less";
+
+//*******************************
+//    VARIABLES - Unlock
+//*******************************
+
+//-------------------
+//   GLOBAL
+//--------------------
+
+// Typography
+////////////////////////////
+#var.global.type();
+// Breakpoints
+////////////////////////////
+#var.global.breakpoints();
+// Sizing
+////////////////////////////
+#var.global.sizing();
+
+//-------------------
+//   SKIN
+//--------------------
+
+// Colours
+////////////////////////////
+#var.skin.colors();
+// Typography
+////////////////////////////
+#var.skin.type();
+// Links
+////////////////////////////
+#var.skin.links();
+// Button
+////////////////////////////
+#var.skin.btn();
+// Button Group
+////////////////////////////
+#var.skin.btn-group();
+// Item
+////////////////////////////
+#var.skin.item();
+// Item
+////////////////////////////
+#var.skin.masthead();
+
+//*******************************
+//    MIXINS - Import
+//*******************************
+
+@import "./mixins/config.less";
+
+//*******************************
+//    RULESETS - Import
+//    Rulesets for all modules get referenced in the global scope for access anywhere
+//    Use the local override dir to extend or replace module rules
+//*******************************
+
+//-------------------
+//   GLOBAL
+//--------------------
+
+// Reset
+////////////////////////////
+@import "./global/reset/rules/config.less";
+
+//-------------------
+//   SKIN
+//--------------------
+
+// Reset
+////////////////////////////
+@import "./skin/reset/rules/config.less";
+// Buttons
+////////////////////////////
+@import "./skin/buttons/rules/config.less";
+// Headings
+////////////////////////////
+@import "./skin/headings/rules/config.less";
+// Item
+////////////////////////////
+@import "./skin/item/rules/config.less";
+// Masthead
+////////////////////////////
+@import "./skin/masthead/rules/config.less";
+
+// Custom Properties :root
+// Rulesets sit within variables folder
+////////////////////////////
+@import "./variables/custom-props/config.less";
+
+//*******************************
+//    CLASSES - Import
+//    Classes relating to framework and modules imported
+//*******************************
+
+//-------------------
+//   CUSTOM PROPERTIES
+//--------------------
+
+@import "./variables/custom-props/custom-props.less";
+
+//-------------------
+//   GLOBAL
+//--------------------
+
+// Reset
+////////////////////////////
+@import "./global/reset/reset.less";
+
+//-------------------
+//   SKIN
+//--------------------
+
+// Reset
+////////////////////////////
+@import "./skin/reset/reset.less";
+// Buttons
+////////////////////////////
+@import "./skin/buttons/buttons.less";
+// Headings
+////////////////////////////
+@import "./skin/headings/headings.less";
+// Item
+////////////////////////////
+@import "./skin/item/item.less";
+// Masthead
+////////////////////////////
+@import "./skin/masthead/masthead.less";
+
+//-------------------
+//   COLLECTIONS
+//--------------------
+
+// Aspect Ratio
+////////////////////////////
+@import "./collections/aspect-ratio/index.less";
+
+//*******************************
+//    SITE - Custom site styles
+//    Your bespoke project CSS should go here
+//*******************************
+
+// @import "";
+
+//*******************************
+//    ULTILITIES - Import
+//*******************************
+
+// add this to own ultility less import 
+@responsive {
+  .full-srn {
+    position:relative;
+    width:100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+@responsive {
+  .text-inverted {
+    color:@inverted-text-color;
+    color:var(--inverted-text-color);
+  }
+}
+
+@responsive {
+  .o-mh .max-h-full { max-height: 100%; }
+  .o-mh .max-h-screen { max-height: 100vh; }  
+}
+
+//*******************************
+//    TAILWIND ultilities
+//*******************************
+
+@tailwind utilities;
+

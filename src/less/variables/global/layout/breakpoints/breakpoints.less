@@ -1,0 +1,37 @@
+//*******************************
+//    Breakpoint variables
+//    Notes: By default these are just references to tailwinds customised breakpoint config settings.
+//           They can be overriden with different values not related to tailwind and used within @media queries
+//           Otherwise, ignore these and use the @screens directive for media queries e.g @screens tab
+//    Reference: https://tailwindcss.com/docs/using-with-preprocessors
+//*******************************
+
+#var.global {
+  .breakpoints() {
+
+    //-------------------
+    //  Min width values
+    //--------------------
+  
+    @mob                       : theme('screens.mob');
+    @lgmob                     : theme('screens.lgmob');
+    @tab                       : theme('screens.tab');
+    @lap                       : theme('screens.lap');
+    @dt                        : theme('screens.dt');
+
+    //-------------------
+    //  Max width values
+    //--------------------    
+
+    @mobmax                    : '';
+    @lgmobmax                  : '';
+    @tabmax                    : theme('screens.tabmax');
+    @lapmax                    : '';
+    @dtmax                     : '';    
+
+  }
+
+}
+
+
+

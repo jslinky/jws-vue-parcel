@@ -1,0 +1,26 @@
+#rules {
+  .global() {
+    @html: {
+      box-sizing: border-box;
+      font-size: @fontSizeRootPixel;
+      height:100%;      
+    };
+    @body: {
+      .cust-prop(font-size, var(--fs), @fontSize);
+      .cust-prop(line-height, var(--lh), @lineHeight);
+      .cust-prop(color, var(--text-color), @text-color);
+    };
+    @element-spacing: {
+      margin-top:calc(@offset);  
+      margin-bottom:calc(@offset);        
+    };
+  }
+}
+
+#rules {
+  .global(@ruleset) {
+    #rules.global();
+    @rules: @@ruleset;
+    @rules();
+  }
+}

@@ -1,0 +1,42 @@
+
+// /*******************************
+// Item
+// *******************************/
+
+//-------------------
+//  Layout
+//-------------------- 
+
+.o-item { #rules.skin.item(default); }
+.o-item__figure { #rules.skin.item(figure); }
+.o-item__figure-link { #rules.skin.item(figure-link); }
+.o-item__picture { #rules.skin.item(picture); }
+.o-item__img { #rules.skin.item(img); }
+.o-item__hdr { #rules.skin.item(hdr); }
+.o-item__content { #rules.skin.item(content); }
+.o-item__content--overlay { #rules.skin.item(content-overlay); }
+.o-item--card .o-item__figure { #rules.skin.item(card-figure); }
+.o-item--card .o-item__figure-link { #rules.skin.item(card-figure-link); }
+.o-item--card .o-item__content { #rules.skin.item(card-content); }
+
+.o-item__content * + *:not(.o-btn) {
+  margin-top:var(--item-content-rhythm);
+}
+
+.o-item__content > p + .o-btns {
+  --item-content-rhythm:0;
+}
+
+.o-item__content > * {
+  pointer-events: var(--item-pointer-e);
+}
+
+.o-item__content .o-btns,
+.o-item__content .o-btn {
+    --item-pointer-e:all;
+}
+
+
+
+
+

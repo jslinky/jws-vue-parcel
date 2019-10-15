@@ -1,0 +1,70 @@
+#rules.skin {
+  .global() {
+    @body: {
+      font-family: @body-fontFamily;
+      font-weight: @body-fontWeight;
+      letter-spacing: @body-letterSpacing;
+      font-smooth: @body-fontSmoothing;
+      -webkit-font-smoothing: @body-fontSmoothing-webkit;
+      -moz-osx-font-smoothing: @body-fontSmoothing-moz;           
+    };
+    @p: {
+      font-size: @paragraphFontSize;
+      letter-spacing: @paragraphLetterSpacing;
+      margin: @paragraphSpacing;
+      line-height:@paragraphLineHeight;
+      -webkit-text-size-adjust: 100%;
+    };
+    @link: {
+      cursor: pointer;
+      position:relative;
+      color: @linkColor;
+      text-decoration: @linkDecoration;
+      transition:@linkTransition;
+    };
+    @link-hover: {
+      color:@linkColorHover;
+      text-decoration: @linkDecorationHover;
+    };
+    @link-after: {
+      content:'';
+      position: absolute;
+      top: @linkAfterElTopPos;
+      right: @linkAfterElRightPos;
+      bottom: @linkAfterElBottomPos;
+      left: @linkAfterElLeftPos;
+      height:@linkAfterElHeight;
+      background: @linkAfterElBgColor;
+      transform: @linkAfterElTransform;
+      opacity:@linkAfterElBgOpacity;
+      transition:@linkAfterTransition;
+    };
+    @link-hover-after: {
+      background:@linkAfterElBgColorHover;            
+      opacity:@linkAfterElBgOpacityHover;                
+    };            
+  }
+}
+
+
+//-------------------
+//  EXTEND(ING) global body ruleset
+//--------------------
+
+#rules {
+  .global(body) {
+    #rules.skin.global(body);
+  }
+}
+
+//-------------------
+//  SET UP SKIN GLOBAL MIXIN
+//--------------------
+
+#rules.skin {
+  .global(@ruleset) {
+    #rules.skin.global();
+    @rules: @@ruleset;
+    @rules();
+  }
+}

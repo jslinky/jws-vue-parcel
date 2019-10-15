@@ -1,0 +1,40 @@
+//*******************************
+//    Masthead Rules
+//*******************************
+
+#rules.skin {
+  .masthead() {
+    @default: {
+      display: flex;
+      .cust-prop(flex-direction, var(--mh-dir), @mh-dir);
+      .cust-prop(justify-content, var(--mh-justify), @mh-justify);
+      .cust-prop(align-items, var(--mh-align), @mh-align);
+      .cust-prop(min-height, var(--mh-min-h), @mh-min-h);
+      .cust-prop(background, var(--mh-bg), @mh-bg);      
+    }; 
+    @cover: {
+      --mh-min-h:100vh;
+    };
+    @cover-figure-link: {
+      display: flex;
+      flex-direction: column;
+    };  
+    @cover-item-img: {
+      flex: 1 1 100%;
+      max-height: 100vh;
+      --item-img-ob-fit: cover;
+    };
+  }
+}
+
+//-------------------
+//  SET UP SKIN MASTHEAD MIXIN
+//--------------------
+
+#rules.skin {
+  .masthead(@ruleset) {
+    #rules.skin.masthead();
+    @rules: @@ruleset;
+    @rules();
+  }
+}
